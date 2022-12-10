@@ -13,6 +13,13 @@ module.exports = {
             return;
         }
 
+        if (interaction.content.toLowerCase().includes("misato")) {
+            await interaction.channel.send("Certified Misato moment.", {
+                files: ["./images/mommy.gif"],
+            });
+            return;
+        }
+
         if (!interaction.content.toLowerCase().includes("rizz") && interaction.channelId === rizzChannelId) {
             await interaction.delete();
         }
