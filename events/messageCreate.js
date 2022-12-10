@@ -1,4 +1,4 @@
-const { Events } = require('discord.js');
+const { Events, MessagePayload} = require('discord.js');
 const { rizzChannelId } = require('../config.json');
 
 module.exports = {
@@ -14,7 +14,8 @@ module.exports = {
         }
 
         if (interaction.content.toLowerCase().includes("misato")) {
-            await interaction.channel.send("Certified Misato moment.", {
+            await interaction.channel.send({
+                content: "Certified Mommy Misato Moment.",
                 files: ["./images/mommy.gif"],
             });
             return;
