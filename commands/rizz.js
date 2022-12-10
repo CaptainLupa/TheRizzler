@@ -6,7 +6,6 @@ module.exports = {
         .setDescription("Rizzles"),
 
     async execute(interaction) {
-        await interaction.delete();
-        await interaction.channel.send("You wanna get TBell?");
+        
     },
 };

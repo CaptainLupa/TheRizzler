@@ -5,6 +5,6 @@ module.exports = {
     once: true,
     execute(client) {
         console.log(`Ready: logged in as ${client.user.tag}`)
-        client.user.setActivity('rizz', {type: ActivityType.Listening});
+        client.user.setActivity('Rizz', {type: ActivityType.Listening});
     }
 }
