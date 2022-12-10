@@ -1,2 +1,2 @@
 # TheRizzler
-Discord bot that detects optimal rizz levels.
+Discord bot that optimizes your servers rizz levels.
