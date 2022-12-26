@@ -1,5 +1,5 @@
-const { Events, MessagePayload} = require('discord.js');
-const { rizzChannelId } = require('../config.json');
+const { Events } = require('discord.js');
+const { rizzChannelId, cerberusRizzChannelId } = require('../config.json');
 
 module.exports = {
     name: Events.MessageCreate,
@@ -21,7 +21,7 @@ module.exports = {
             return;
         }
 
-        if (!interaction.content.toLowerCase().includes("rizz") && interaction.channelId === rizzChannelId) {
+        if (!interaction.content.toLowerCase().includes("rizz") && (interaction.channelId === rizzChannelId || interaction.channelId === cerberusRizzChannelId)) {
             await interaction.delete();
         }
     }

@@ -1,6 +1,6 @@
 const { REST } = require('@discordjs/rest');
 const { Routes } = require('discord.js')
-const { guildId, rizzlerId, token } = require('./config.json');
+const { asbGuildId, cerberusGuildId, rizzlerId, token } = require('./config.json');
 const fs = require('fs');
 
 module.exports = {
@@ -19,7 +19,8 @@ module.exports = {
         try {
             console.log(`Started refreshing slash commands`);
 
-            const data = await rest.put(Routes.applicationCommands(rizzlerId, guildId), {body: commands});
+            await rest.put(Routes.applicationCommands(rizzlerId, asbGuildId), {body: commands});
+            await rest.put(Routes.applicationCommands(rizzlerId, cerberusGuildId), {body: commands});
 
             console.log("We've managed to avoid drowning. Good job!")
         } catch (e) {
